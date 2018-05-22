@@ -1,0 +1,9 @@
+.choice {
+    cursor: pointer;
+    margin: 20px;
+    text-align: center;
+}
+
+.choice:hover {
+    opacity: 0.5;
+}
