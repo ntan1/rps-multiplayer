@@ -13,3 +13,6 @@ const database = firebase.database();
 // Initialize vars
 let yourChoice = "rock";
 let opponentChoice = "scissors";
+let messageBox = $("#message");
+let chatList = $("#messages");
+let nameBox = $("#name");
