@@ -11,7 +11,7 @@ $(document).ready(function () {
             plRef.orderByChild("name").equalTo(username).once("value", function (player) {
                 console.log(player.val());
                 // check if username taken
-                if (player.val() === null) {
+                if (player.val() === null && playerCount < 2) {
                     $("#username-container").remove();
                     database.ref("players").child(username).set({
                         name: username,
@@ -24,6 +24,8 @@ $(document).ready(function () {
                     }, function () {
                         $("#board").show();
                     });
+                } else if (playerCount >= 2) {
+                    alert("Two players already in game ...");
                 } else {
                     alert("username taken");
                 }
@@ -43,7 +45,7 @@ $(document).ready(function () {
 
     // listen for choice changes in players
     plRef.on("value", function (players) {
-        let playerCount = Object.keys(players.val()).length;
+        playerCount = Object.keys(players.val()).length;
         if (playerCount > 1) {
             players.forEach(function (player) {
                 // check whether other player has chosen
@@ -54,7 +56,7 @@ $(document).ready(function () {
                             $(opSelection).html(`<h3>${player.val().name} has picked ${player.val().choice}</h3>`);
                             checkWinner();
                             updateStats();
-                            setTimeout(function() {reset()}, 2000);
+                            setTimeout(function () { reset() }, 2000);
                         } else {
                             $(opSelection).html(`<h3>${player.val().name} has picked, make your move</h3>`);
                         }
@@ -65,7 +67,7 @@ $(document).ready(function () {
                     choice = player.val().choice;
                 }
             });
-        } else {
+        } else if (playerCount === 1) {
             $(opSelection).html(`<h3>Waiting for an opponent ...</h3>`);
         }
     });

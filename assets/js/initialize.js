@@ -18,6 +18,7 @@ let messageBox = $("#message");
 let chatList = $("#messages");
 let opSelection = $("#opponent-selection");
 
+let playerCount = 0;
 let username = "";
 let choice = "";
 let opChoice = "";
