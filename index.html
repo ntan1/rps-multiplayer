@@ -18,6 +18,13 @@
                 <h1>Rock Paper Scissors</h1>
             </div>
         </header>
+        <div id="username-container">
+            <form id="username-select" class="form-group">
+                <label>Select a username: </label>
+                <input id="username" class="form-control" type="text">
+                <button class="submitUsername">Submit</button>
+            </form>
+        </div>
         <section id="board">
             <div id="selection" class="row justify-content-center">
                 <figure class="choice" data-choice="rock">
@@ -41,8 +48,6 @@
         <aside id="chat">
             <form class="form-group">
                 <textarea id="messages" class="" readonly></textarea>
-                <label>Name: </label>
-                <input id="name" type="text">
                 <label>Message: </label>
                 <input id="message" class="form-control" type="text">
                 <button class="submitMessage">Submit</button>

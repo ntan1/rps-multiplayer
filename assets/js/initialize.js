@@ -9,10 +9,12 @@ const config = {
 };
 firebase.initializeApp(config);
 const database = firebase.database();
+const msgRef = database.ref("messages");
+const plRef = database.ref("players");
 
 // Initialize vars
-let yourChoice = "rock";
-let opponentChoice = "scissors";
+let usernameBox = $("#username");
 let messageBox = $("#message");
 let chatList = $("#messages");
-let nameBox = $("#name");
+
+let username = "player";
