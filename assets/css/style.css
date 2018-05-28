@@ -8,10 +8,10 @@
     opacity: 0.5;
 }
 
-textarea {
+.output {
     resize: none;
     width: 100%;
-    height: 200px;
+    height: 15rem;
 }
 
 .selected {

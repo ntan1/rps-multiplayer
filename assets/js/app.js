@@ -1,3 +1,7 @@
+// todo: notification sounds
+// todo: player queue
+// todo: stricter input
+
 $(document).ready(function () {
 
     // hide board till username selected
@@ -183,6 +187,8 @@ $(document).ready(function () {
             var oldMessages = "";
         }
         $("#messages").text(`${oldMessages}${childsnapshot.val().ts} ${childsnapshot.val().name}: ${childsnapshot.val().message}`);
+        console.log($(chatList).scrollTop());
+        $(chatList).scrollTop($(chatList)[0].scrollHeight);
     });
 
     // clear chat box of previous messages on load
