@@ -16,5 +16,11 @@ const plRef = database.ref("players");
 let usernameBox = $("#username");
 let messageBox = $("#message");
 let chatList = $("#messages");
+let opSelection = $("#opponent-selection");
 
-let username = "player";
+let username = "";
+let choice = "";
+let opChoice = "";
+let wins = 0;
+let losses = 0;
+let draws = 0;

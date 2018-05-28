@@ -13,3 +13,7 @@ textarea {
     width: 100%;
     height: 200px;
 }
+
+.selected {
+    background-color: brown;
+}

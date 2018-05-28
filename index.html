@@ -26,6 +26,12 @@
             </form>
         </div>
         <section id="board">
+            <div id="stats">
+                Wins: <span id="wins">0</span>
+                Losses: <span id="losses">0</span>
+                Draws: <span id="draws">0</span>
+            </div>
+            <h3>Choose either rock, paper, or scissors</h3>
             <div id="selection" class="row justify-content-center">
                 <figure class="choice" data-choice="rock">
                     <img class="img-fluid" src="assets/images/rock-100.png">
@@ -40,19 +46,18 @@
                     <figcaption>Scissors</figcaption>
                 </figure>
             </div>
-            <h3>Choose either rock, paper, or scissors</h3>
             <div id="opponent-selection">
-                <h3>Your opponent chose...</h3>
+                <h3>Your opponent chose ...</h3>
             </div>
+            <aside id="chat">
+                <form class="form-group">
+                    <textarea id="messages" class="" readonly></textarea>
+                    <label>Message: </label>
+                    <input id="message" class="form-control" type="text">
+                    <button class="submitMessage">Submit</button>
+                </form>
+            </aside>
         </section>
-        <aside id="chat">
-            <form class="form-group">
-                <textarea id="messages" class="" readonly></textarea>
-                <label>Message: </label>
-                <input id="message" class="form-control" type="text">
-                <button class="submitMessage">Submit</button>
-            </form>
-        </aside>
     </main>
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
